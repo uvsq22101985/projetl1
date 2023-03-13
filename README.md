@@ -13,4 +13,3 @@ comportement de cet automate."
 
 
 
-
