@@ -1,5 +1,9 @@
 #projet fourmi
-
+#groupe 4 
+#BAISS SALMA
+#RAFIQ RIZLANE
+# Moayé KOMENAN
+# ZOUMARA MBEMBE GRACE 
 from tkinter import *
 from random import randint
 from tkinter.font import Font
