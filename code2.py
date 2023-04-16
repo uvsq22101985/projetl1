@@ -375,7 +375,7 @@ font_base = Font(family='Helvetica', size=12, weight='bold')
 
 #Boutons
 
-bouton_creer_fourmi = Button(fenetre, text="Creer une fourmi", font=font_base, width=15, height=3, bg="darkSeaGreen1", fg="forest green", command=creation_fourmi)
+bouton_creer_fourmi = Button(fenetre, text="Creer une fourmi", font=font_base, width=15, height=3, bg="wheat3", fg="wheat4", command=creation_fourmi)
 
     #Bouton play pour lancer le jeu de manière automatique
 bouton_play = Button(fenetre, text="Play", font=font_base, width=10, height=3, command=automate)
@@ -393,10 +393,10 @@ im_droite = PhotoImage(file = r"C:\Users\novan\Documents\L1\S2-python\projets\fo
 im_gauche = PhotoImage(file = r"C:\Users\novan\Documents\L1\S2-python\projets\fourmi\fleche_gauche.png")
 
     #Bouton fleches
-bouton_haut = Button(fenetre, image = im_haut, borderwidth=3, command= lambda : orientation_fourmi("haut"))
-bouton_bas = Button(fenetre, image = im_bas, borderwidth=3, command= lambda : orientation_fourmi("bas"))
-bouton_droit = Button(fenetre, image = im_droite, borderwidth=3, command= lambda : orientation_fourmi("droite"))
-bouton_gauche = Button(fenetre, image = im_gauche, borderwidth=3, command= lambda : orientation_fourmi("gauche"))
+bouton_haut = Button(fenetre, image = im_haut, borderwidth=1, command= lambda : orientation_fourmi("haut"))
+bouton_bas = Button(fenetre, image = im_bas, borderwidth=1, command= lambda : orientation_fourmi("bas"))
+bouton_droit = Button(fenetre, image = im_droite, borderwidth=1, command= lambda : orientation_fourmi("droite"))
+bouton_gauche = Button(fenetre, image = im_gauche, borderwidth=1, command= lambda : orientation_fourmi("gauche"))
 
     #Bouton sauvegarde
 bouton_save = Button(fenetre, text="Sauvegarde", font=font_base, width=10, height=3, command=save)
@@ -411,8 +411,8 @@ bouton_retour = Button(fenetre, text="Retour", font=font_base, width=10, height=
 bouton_quitter = Button(fenetre, text="Quitter", font=font_base, width=10, height=3, command=fermer_fenetre)
 
 #Labels
-txt_orientation = Label(text="Choisir l'orientation\n de la fourmi :", font=font_base, width=15, height=3, bg="darkSeaGreen1", fg="forest green", padx=15)
-txt_informatif = Label(text="", font=font_base, width=15, height=3, bg="darkSeaGreen1", fg="forest green", padx=15)
+txt_orientation = Label(text="Choisir l'orientation\n de la fourmi :", font=font_base, width=15, height=3, bg="wheat4", fg="wheat3", padx=15)
+txt_informatif = Label(text="", font=font_base, width=15, height=3, bg="wheat4", fg="wheat3", padx=15)
 
 #Scale pour la vitesse
 scale_vitesse = Scale(fenetre, orient='horizontal', from_=0, to=500, tickinterval=100, length=400, label='Temps d\'execution (ms)')
