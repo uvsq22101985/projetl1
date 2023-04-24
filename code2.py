@@ -1,6 +1,6 @@
 #programme fourmis de langton
-HAUTEUR = 600
-LARGEUR = 600
+import tkinter as tk
+from tkinter import *
 
 #Cases de la grille
 cases = []
@@ -418,40 +418,9 @@ bouton_haut.grid(column =1, row = 2, rowspan=2, sticky="n")
 bouton_droit.grid(column =2, row = 2)
 bouton_gauche.grid(column =0, row = 2)
 
-    #Bouton play
-bouton_play.grid(column=1, row=1)
-
-    #Bouton next
-bouton_next.grid(column=1, row=3)
-
-    #Bouton pause
-bouton_pause.grid(column=1, row=2)
-
-    #Bouton save
-bouton_save.grid(column=10, row=1, padx=5)
-
-    #Bouton load
-bouton_load.grid(column=10, row=2, padx=5)
-
-    #Bouton retour
-bouton_retour.grid(column=10, row=0, padx=5)
-
-    #Bouton quitter
-bouton_quitter.grid(column=10, row=3, padx=5)
-
-#Placement des labels
-
-    #label demandant de choisir l'orientation
-txt_orientation.grid(column=0, row=1, columnspan=3, padx=10)
-
-    #label qui affiche l'orientation pour la fourmi choisi par l'utilisateur 
-txt_informatif.grid(column=0, row=0, columnspan=3, padx=10)
-
-#Placement de scale
-scale_vitesse.grid(column=4, row =5)
+def fourmi_langton():
 
 
 ###BOUCLE PRINCIPALE
 jeu_Fourmi()
 fenetre.mainloop()
-
