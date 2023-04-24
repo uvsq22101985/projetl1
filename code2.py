@@ -237,12 +237,11 @@ def deplacement():
         
         maj_grille()    #On met a jour la grille pour prendre en compte les deplacement
 
-        if auto == True:      #Si la variable automate est en position True, cela signifie que l'automate doit etre actif
-            #On rappelle la fonction deplacement de maniere automatique en prenant en compte la vitesse recuperee par le scale
+        if auto == True:      
             canevas.after(scale_vitesse.get(), deplacement)
 
 def verif_coordonnee():
-    '''Fonction permettant de modifier les coordonnees si la fourmi doit changer de cote'''
+    '''Fonction pour modifier les coordonnees si la fourmi doit changer de cote'''
     global x_fourmi, y_fourmi
 
     if y_fourmi < 0:        #Si la coordonnee y est inferieur a 0, alors la fourmi passe en bas 
@@ -261,7 +260,7 @@ def automate():
     '''Fonction activant l'automate du jeu'''
     global var_pause, auto
 
-    #On modifie la variable pause en False pour activer le deplacement automatique
+    
     var_pause = False
     auto = True  
     deplacement()
@@ -270,11 +269,11 @@ def pause():
     '''Fonction permettant d'arreter l'automate'''
     global var_pause, auto
 
-    #On modifie la variable pause en True pour dire que l'automate doit se mettre en pause
+   
     var_pause = True
 
 def next():
-    '''Fonction permettant de passer les etapes une a une'''
+    
     global auto, var_pause
 
     var_pause = False
@@ -300,13 +299,13 @@ def save():
     fic.close()
 
 def load():
-    '''Fonction permettant de charger une partie sauvegardee'''
+    '''Fonction pour charger une partie sauvegardee'''
     global config_courante, x_fourmi, y_fourmi, variable_orientation
 
-    #On ouvre le fichier en mode lecture pour recuperer la configuration courante, les coordonnees et l'orientation de la fourmi
+    
     fic = open("sauvegarde.txt", 'r')
 
-    #Boucle permettant la recuperation des elements de la configuration courante
+    #Boucle permettant la recuperation des elements 
     for i in range(n):
         for j in range(n):
             val = int(fic.readline())
@@ -319,8 +318,8 @@ def load():
     fic.close()
     return maj_grille()                     #On met a jour la grille avec la nouvelle configuration courante
 
-def retour(): #ENCORE EN DVPT
-    '''Fonction qui permet de revenir d'une etape en arriere'''
+def retour(): 
+    '''Fonction  pour de revenir en arriere'''
     global config_courante, x_fourmi, y_fourmi, variable_orientation
 
     if config_courante[y_fourmi][x_fourmi] == 1 : #si c'est noir
@@ -364,8 +363,7 @@ def fermer_fenetre():
 #########################################
 
 ##CREATION DES WIDGETS
-
-#Widgets principaux
+#####Widgets principaux
 
 fenetre = Tk()
 canevas = Canvas(fenetre, height=HAUTEUR, width=LARGEUR, highlightthickness=4, highlightbackground="ForestGreen")
