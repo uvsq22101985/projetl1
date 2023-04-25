@@ -438,7 +438,7 @@ bouton_play.grid(column=1, row=1)
 bouton_next.grid(column=1, row=3)
 
     #Bouton pause
-bouton_pause.grid(column=1, row=23)
+bouton_pause.grid(column=1, row=2)
 
     #Bouton save
 bouton_save.grid(column=10, row=1, padx=5)
